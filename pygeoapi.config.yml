@@ -86,14 +86,14 @@ resources:
   hydrobasins:
     type: collection
     title: Hydrobasins
-    description: Six-digit Hydrologic Basins
+    description: Level06 Hydrologic Basins from Hydrosheds
     keywords:
       - Hydrologic Basins
-      - HU06
+      - lev06
     links:
       - <<: *data_link
-        href: https://water.usgs.gov/themes/hydrologic-units/
-        title: Hydrologic Unit Documentation
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
     extents:
       spatial:
         bbox: [-180, -90, 180, 90]
@@ -108,6 +108,33 @@ resources:
       - <<: *tile_defaults
         id_field: id
         table: hydrobasins_lvl6_context
+
+  resources:
+    hydrobasins:
+      type: collection
+      title: Hydrobasins
+      description: Level05 Hydrologic Basins from Hydrosheds
+      keywords:
+        - Hydrologic Basins
+        - lev05
+      links:
+        - <<: *data_link
+          href: https://www.hydrosheds.org/products/hydrobasins
+          title: HydroBASINS v1.0 Documentation
+      extents:
+        spatial:
+          bbox: [-180, -90, 180, 90]
+          crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+        temporal:
+          begin: null
+          end: null
+      providers:
+        - <<: *provider_defaults
+          id_field: id
+          table: hydrobasins_lvl5_context
+        - <<: *tile_defaults
+          id_field: id
+          table: hydrobasins_lvl5_context
 
   flowlines:
     type: collection
