@@ -83,17 +83,147 @@ metadata:
     name: Benjamin Webb
 
 resources:
-  hydrobasins:
+  hydrobasins Level 01:
     type: collection
     title: Hydrobasins
-    description: Six-digit Hydrologic Basins
+    description: Level01 Hydrologic Basins from Hydrosheds
     keywords:
-      - Hydrologic Basins
-      - HU06
+      - HydroSHEDS 
+      - HydroBASINS Level01
     links:
       - <<: *data_link
-        href: https://water.usgs.gov/themes/hydrologic-units/
-        title: Hydrologic Unit Documentation
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl1_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl1_context
+
+  hydrobasins Level 02:
+    type: collection
+    title: Hydrobasins
+    description: Level02 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - HydroBASINS Level02
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl2_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl2_context
+        
+  hydrobasins Level 03:
+    type: collection
+    title: Hydrobasins
+    description: Level03 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS 
+      - HydroBASINS Level03
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl3_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl3_context
+        
+  hydrobasins Level 04:
+    type: collection
+    title: Hydrobasins
+    description: Level04 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS 
+      - HydroBASINS Level04
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl4_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl4_context
+
+  hydrobasins Level 05:
+    type: collection
+    title: Hydrobasins
+    description: Level05 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS 
+      - HydroBASINS Level05
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl5_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl5_context
+
+  hydrobasins Level 06:
+    type: collection
+    title: Hydrobasins
+    description: Level06 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - Hydrobasins Level06
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
     extents:
       spatial:
         bbox: [-180, -90, 180, 90]
@@ -109,6 +239,162 @@ resources:
         id_field: id
         table: hydrobasins_lvl6_context
 
+  hydrobasins Level 07:
+    type: collection
+    title: Hydrobasins
+    description: Level07 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - HydroBASINS Level07
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl7_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl7_context
+
+  hydrobasins Level 08:
+    type: collection
+    title: Hydrobasins
+    description: Level08 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - HydroBASINS Level08
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl8_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl8_context
+
+  hydrobasins Level 09:
+    type: collection
+    title: Hydrobasins
+    description: Level09 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - HydroBASINS Level09
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl9_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl9_context
+
+  hydrobasins Level 10:
+    type: collection
+    title: Hydrobasins
+    description: Level10 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - HydroBASINS Level10
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl10_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl10_context
+
+  hydrobasins Level 11:
+    type: collection
+    title: Hydrobasins
+    description: Level11 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - HydroBASINS Level11
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl11_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl11_context
+
+  hydrobasins Level 12:
+    type: collection
+    title: Hydrobasins
+    description: Level12 Hydrologic Basins from Hydrosheds
+    keywords:
+      - HydroSHEDS
+      - HydroBASINS Level12
+    links:
+      - <<: *data_link
+        href: https://www.hydrosheds.org/products/hydrobasins
+        title: HydroBASINS v1.0 Documentation
+    extents:
+      spatial:
+        bbox: [-180, -90, 180, 90]
+        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
+      temporal:
+        begin: null
+        end: null
+    providers:
+      - <<: *provider_defaults
+        id_field: id
+        table: hydrobasins_lvl12_context
+      - <<: *tile_defaults
+        id_field: id
+        table: hydrobasins_lvl12_context
+        
   flowlines:
     type: collection
     title: Flowlines
