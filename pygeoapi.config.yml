@@ -83,7 +83,7 @@ metadata:
     name: Benjamin Webb
 
 resources:
-  hydrobasins Level 01:
+  hydrobasins_level_01:
     type: collection
     title: Hydrobasins
     description: Level01 Hydrologic Basins from Hydrosheds
@@ -109,7 +109,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl1_context
 
-  hydrobasins Level 02:
+  hydrobasins_level_02:
     type: collection
     title: Hydrobasins
     description: Level02 Hydrologic Basins from Hydrosheds
@@ -135,7 +135,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl2_context
         
-  hydrobasins Level 03:
+  hydrobasins_level_03:
     type: collection
     title: Hydrobasins
     description: Level03 Hydrologic Basins from Hydrosheds
@@ -161,7 +161,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl3_context
         
-  hydrobasins Level 04:
+  hydrobasins_level_04:
     type: collection
     title: Hydrobasins
     description: Level04 Hydrologic Basins from Hydrosheds
@@ -187,7 +187,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl4_context
 
-  hydrobasins Level 05:
+  hydrobasins_level_05:
     type: collection
     title: Hydrobasins
     description: Level05 Hydrologic Basins from Hydrosheds
@@ -213,7 +213,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl5_context
 
-  hydrobasins Level 06:
+  hydrobasins_level_06:
     type: collection
     title: Hydrobasins
     description: Level06 Hydrologic Basins from Hydrosheds
@@ -239,7 +239,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl6_context
 
-  hydrobasins Level 07:
+  hydrobasins_level_07:
     type: collection
     title: Hydrobasins
     description: Level07 Hydrologic Basins from Hydrosheds
@@ -265,7 +265,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl7_context
 
-  hydrobasins Level 08:
+  hydrobasins_level_08:
     type: collection
     title: Hydrobasins
     description: Level08 Hydrologic Basins from Hydrosheds
@@ -291,7 +291,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl8_context
 
-  hydrobasins Level 09:
+  hydrobasins_level_09:
     type: collection
     title: Hydrobasins
     description: Level09 Hydrologic Basins from Hydrosheds
@@ -317,7 +317,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl9_context
 
-  hydrobasins Level 10:
+  hydrobasins_level_10:
     type: collection
     title: Hydrobasins
     description: Level10 Hydrologic Basins from Hydrosheds
@@ -343,7 +343,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl10_context
 
-  hydrobasins Level 11:
+  hydrobasins_level_11:
     type: collection
     title: Hydrobasins
     description: Level11 Hydrologic Basins from Hydrosheds
@@ -369,7 +369,7 @@ resources:
         id_field: id
         table: hydrobasins_lvl11_context
 
-  hydrobasins Level 12:
+  hydrobasins_level_12:
     type: collection
     title: Hydrobasins
     description: Level12 Hydrologic Basins from Hydrosheds
