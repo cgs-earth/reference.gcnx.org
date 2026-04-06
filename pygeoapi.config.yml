@@ -1,8 +1,9 @@
 data_link: &data_link
   type: text/html
   rel: canonical
-  title: Data source
   hreflang: en-US
+  href: https://water.usgs.gov/themes/hydrologic-units/
+  title: Hydrologic Unit Documentation
 
 provider_defaults: &provider_defaults
   type: feature
@@ -20,7 +21,7 @@ provider_defaults: &provider_defaults
 tile_defaults: &tile_defaults
   <<: *provider_defaults
   type: tile
-  name: MVT-PostgresCache
+  name: pygeoapi_plugins.provider.mvt_cache.MVTPostgresFilesystem
   mvt_table: mvt_tiles
   storage_crs: http://www.opengis.net/def/crs/EPSG/0/4326
   disable_cache_at_z: 8
@@ -83,31 +84,187 @@ metadata:
     name: Benjamin Webb
 
 resources:
-  hydrobasins:
+  hydrobasins/lvl1:
     type: collection
-    title: Hydrobasins
-    description: Six-digit Hydrologic Basins
+    title: One-digit Hydrobasins
+    description: One-digit Hydrobasins
     keywords:
       - Hydrologic Basins
-      - HU06
-    links:
-      - <<: *data_link
-        href: https://water.usgs.gov/themes/hydrologic-units/
-        title: Hydrologic Unit Documentation
-    extents:
+      - HU01
+    links: [*data_link]
+    extents: &world-extent
       spatial:
         bbox: [-180, -90, 180, 90]
         crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-      temporal:
-        begin: null
-        end: null
     providers:
       - <<: *provider_defaults
-        id_field: id
+        table: hydrobasins_lvl1_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl1_context
+
+  hydrobasins/lvl2:
+    type: collection
+    title:  Two-digit Hydrobasins
+    description: Two-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU02
+    links: [*data_link] 
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl2_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl2_context
+  hydrobasins/lvl3:
+    type: collection
+    title: Three-digit Hydrobasins
+    description: Three-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU03
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl3_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl3_context
+  hydrobasins/lvl4:
+    type: collection
+    title: Four-digit Hydrobasins
+    description: Four-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU04
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl4_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl4_context
+
+  # hydrobasins/lvl5:
+  #   type: collection
+  #   title: Five-digit Hydrobasins
+  #   description: Five-digit Hydrobasins
+  #   keywords:
+  #     - Hydrologic Basins
+  #     - HU05
+  #   links: [*data_link]
+  #   extents: *world-extent
+  #   providers:
+  #     - <<: *provider_defaults
+  #       table: hydrobasins_lvl5_context
+  #     - <<: *tile_defaults
+  #       table: hydrobasins_lvl5_context
+
+  hydrobasins/lvl6:
+    type: collection
+    title: Six-digit Hydrobasins
+    description: Six-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU04
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
         table: hydrobasins_lvl6_context
       - <<: *tile_defaults
-        id_field: id
         table: hydrobasins_lvl6_context
+
+  hydrobasins/lvl7:
+    type: collection
+    title: Seven-digit Hydrobasins
+    description: Seven-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU07
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl7_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl7_context
+
+  hydrobasins/lvl8:
+    type: collection
+    title: Eight-digit Hydrobasins
+    description: Eight-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU08
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl8_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl8_context
+
+  # hydrobasins/lvl9:
+  #   type: collection
+  #   title: Nine-digit Hydrobasins
+  #   description: Nine-digit Hydrobasins
+  #   keywords:
+  #     - Hydrologic Basins
+  #     - HU09
+  #   links: [*data_link]
+  #   extents: *world-extent
+  #   providers:
+  #     - <<: *provider_defaults
+  #       table: hydrobasins_lvl9_context
+  #     - <<: *tile_defaults
+  #       table: hydrobasins_lvl9_context
+
+  hydrobasins/lvl10:
+    type: collection
+    title: Ten-digit Hydrobasins
+    description: Ten-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU10
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl10_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl10_context
+
+  hydrobasins/lvl11:
+    type: collection
+    title: Eleven-digit Hydrobasins
+    description: Eleven-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU11
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl11_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl11_context
+
+  hydrobasins/lvl12:
+    type: collection
+    title: Twelve-digit Hydrobasins
+    description: Twelve-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU12
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl12_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl12_context
+        min_pixel: 512
 
   flowlines:
     type: collection
@@ -120,13 +277,7 @@ resources:
       - <<: *data_link
         href: https://water.usgs.gov/themes/hydrologic-units/
         title: Hydrologic Unit Documentation
-    extents:
-      spatial:
-        bbox: [-180, -90, 180, 90]
-        crs: http://www.opengis.net/def/crs/OGC/1.3/CRS84
-      temporal:
-        begin: null
-        end: null
+    extents: *world-extent
     providers:
       - <<: *provider_defaults
         id_field: comid
@@ -137,3 +288,4 @@ resources:
         id_field: comid
         table: merit_plus
         geom: wkb_geometry
+        min_pixel: 1024
