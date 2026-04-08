@@ -2,8 +2,8 @@ data_link: &data_link
   type: text/html
   rel: canonical
   hreflang: en-US
-  href: https://water.usgs.gov/themes/hydrologic-units/
-  title: Hydrologic Unit Documentation
+  href: https://www.hydrosheds.org/products/hydrobasins
+  title: HydroBASINS v1.0 Documentation
 
 provider_defaults: &provider_defaults
   type: feature
@@ -89,9 +89,11 @@ resources:
   hydrobasins/lvl1:
     type: collection
     title: One-digit Hydrobasins
-    description: One-digit Hydrobasins
+    description: One-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU01
     links: [*data_link]
     extents: &world-extent
@@ -107,9 +109,11 @@ resources:
   hydrobasins/lvl2:
     type: collection
     title:  Two-digit Hydrobasins
-    description: Two-digit Hydrobasins
+    description: Two-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU02
     links: [*data_link] 
     extents: *world-extent
@@ -121,9 +125,11 @@ resources:
   hydrobasins/lvl3:
     type: collection
     title: Three-digit Hydrobasins
-    description: Three-digit Hydrobasins
+    description: Three-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU03
     links: [*data_link]
     extents: *world-extent
@@ -135,9 +141,11 @@ resources:
   hydrobasins/lvl4:
     type: collection
     title: Four-digit Hydrobasins
-    description: Four-digit Hydrobasins
+    description: Four-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU04
     links: [*data_link]
     extents: *world-extent
@@ -150,9 +158,11 @@ resources:
   hydrobasins/lvl5:
     type: collection
     title: Five-digit Hydrobasins
-    description: Five-digit Hydrobasins
+    description: Five-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU05
     links: [*data_link]
     extents: *world-extent
@@ -165,10 +175,12 @@ resources:
   hydrobasins/lvl6:
     type: collection
     title: Six-digit Hydrobasins
-    description: Six-digit Hydrobasins
+    description: Six-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
-      - HU04
+      - Hydrobasins
+      - Hydrosheds
+      - HU06
     links: [*data_link]
     extents: *world-extent
     providers:
@@ -180,9 +192,11 @@ resources:
   hydrobasins/lvl7:
     type: collection
     title: Seven-digit Hydrobasins
-    description: Seven-digit Hydrobasins
+    description: Seven-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU07
     links: [*data_link]
     extents: *world-extent
@@ -196,9 +210,11 @@ resources:
   hydrobasins/lvl8:
     type: collection
     title: Eight-digit Hydrobasins
-    description: Eight-digit Hydrobasins
+    description: Eight-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU08
     links: [*data_link]
     extents: *world-extent
@@ -212,9 +228,11 @@ resources:
   hydrobasins/lvl9:
     type: collection
     title: Nine-digit Hydrobasins
-    description: Nine-digit Hydrobasins
+    description: Nine-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU09
     links: [*data_link]
     extents: *world-extent
@@ -228,9 +246,11 @@ resources:
   hydrobasins/lvl10:
     type: collection
     title: Ten-digit Hydrobasins
-    description: Ten-digit Hydrobasins
+    description: Ten-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU10
     links: [*data_link]
     extents: *world-extent
@@ -244,9 +264,11 @@ resources:
   hydrobasins/lvl11:
     type: collection
     title: Eleven-digit Hydrobasins
-    description: Eleven-digit Hydrobasins
+    description: Eleven-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU11
     links: [*data_link]
     extents: *world-extent
@@ -260,9 +282,11 @@ resources:
   hydrobasins/lvl12:
     type: collection
     title: Twelve-digit Hydrobasins
-    description: Twelve-digit Hydrobasins
+    description: Twelve-digit Hydrobasins from Hydrosheds
     keywords:
       - Hydrologic Basins
+      - Hydrobasins
+      - Hydrosheds
       - HU12
     links: [*data_link]
     extents: *world-extent
@@ -282,8 +306,8 @@ resources:
       - Merit
     links:
       - <<: *data_link
-        href: https://water.usgs.gov/themes/hydrologic-units/
-        title: Hydrologic Unit Documentation
+        href: https://data.usgs.gov/datacatalog/data/USGS:614a8864d34e0df5fb97572d
+        title: MERIT Documentation
     extents: *world-extent
     providers:
       - <<: *provider_defaults
