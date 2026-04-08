@@ -21,13 +21,15 @@ provider_defaults: &provider_defaults
 tile_defaults: &tile_defaults
   <<: *provider_defaults
   type: tile
-  name: pygeoapi_plugins.provider.mvt_cache.MVTPostgresFilesystem
+  name: pygeoapi_plugins.provider.mvt_postgresql.MVTPostgreSQLProvider_
   mvt_table: mvt_tiles
   storage_crs: http://www.opengis.net/def/crs/EPSG/0/4326
   disable_cache_at_z: 8
+  min_pixel: 256
+  simplify_geometry: true
   options:
     zoom:
-      min: 1
+      min: 0
       max: 16
   format:
     name: pbf
@@ -145,20 +147,20 @@ resources:
       - <<: *tile_defaults
         table: hydrobasins_lvl4_context
 
-  # hydrobasins/lvl5:
-  #   type: collection
-  #   title: Five-digit Hydrobasins
-  #   description: Five-digit Hydrobasins
-  #   keywords:
-  #     - Hydrologic Basins
-  #     - HU05
-  #   links: [*data_link]
-  #   extents: *world-extent
-  #   providers:
-  #     - <<: *provider_defaults
-  #       table: hydrobasins_lvl5_context
-  #     - <<: *tile_defaults
-  #       table: hydrobasins_lvl5_context
+  hydrobasins/lvl5:
+    type: collection
+    title: Five-digit Hydrobasins
+    description: Five-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU05
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl5_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl5_context
 
   hydrobasins/lvl6:
     type: collection
@@ -189,6 +191,7 @@ resources:
         table: hydrobasins_lvl7_context
       - <<: *tile_defaults
         table: hydrobasins_lvl7_context
+        min_pixel: 512
 
   hydrobasins/lvl8:
     type: collection
@@ -204,21 +207,23 @@ resources:
         table: hydrobasins_lvl8_context
       - <<: *tile_defaults
         table: hydrobasins_lvl8_context
+        min_pixel: 512
 
-  # hydrobasins/lvl9:
-  #   type: collection
-  #   title: Nine-digit Hydrobasins
-  #   description: Nine-digit Hydrobasins
-  #   keywords:
-  #     - Hydrologic Basins
-  #     - HU09
-  #   links: [*data_link]
-  #   extents: *world-extent
-  #   providers:
-  #     - <<: *provider_defaults
-  #       table: hydrobasins_lvl9_context
-  #     - <<: *tile_defaults
-  #       table: hydrobasins_lvl9_context
+  hydrobasins/lvl9:
+    type: collection
+    title: Nine-digit Hydrobasins
+    description: Nine-digit Hydrobasins
+    keywords:
+      - Hydrologic Basins
+      - HU09
+    links: [*data_link]
+    extents: *world-extent
+    providers:
+      - <<: *provider_defaults
+        table: hydrobasins_lvl9_context
+      - <<: *tile_defaults
+        table: hydrobasins_lvl9_context
+        min_pixel: 512
 
   hydrobasins/lvl10:
     type: collection
@@ -234,6 +239,7 @@ resources:
         table: hydrobasins_lvl10_context
       - <<: *tile_defaults
         table: hydrobasins_lvl10_context
+        min_pixel: 512
 
   hydrobasins/lvl11:
     type: collection
@@ -249,6 +255,7 @@ resources:
         table: hydrobasins_lvl11_context
       - <<: *tile_defaults
         table: hydrobasins_lvl11_context
+        min_pixel: 512
 
   hydrobasins/lvl12:
     type: collection
