@@ -316,11 +316,11 @@ resources:
         table: merit_plus
         geom: wkb_geometry
         count: false
-        uri_field: uri
+        uri_field:
       - <<: *tile_defaults
         id_field: comid
         table: merit_plus
         geom: wkb_geometry
         min_pixel: 1024
         simplify_method: ST_SimplifyVW
-        uri_field: uri
+        uri_field:
